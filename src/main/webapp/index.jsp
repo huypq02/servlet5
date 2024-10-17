@@ -28,32 +28,16 @@
 
     <main>
         <section class="news-grid">
-            <article class="news-item">
-                <img src="https://i1-kinhdoanh.vnecdn.net/2024/10/01/tauindo-1727746472-1727746485-6754-1727746503.jpg?w=220&h=132&q=100&dpr=2&fit=crop&s=a1WJkb9CRDjfwPvUBj3jOg" alt="News Image 1">
-                <div class="news-content">
-                    <h2>First News Title</h2>
-                    <p>This is the content for the first news. It highlights the major events happening in the world...</p>
+        	<c:forEach items="${listNews}" var="item">
+        	<article class="news-item">
+        		<img src="${item.image_url}" alt="New image ${id}">
+        		<div class="news-content">
+        		    <h2>"${item.title}"</h2>
+                    <p>"${item.content}"</p>
                     <a href="#" class="read-more">Read more</a>
-                </div>
-            </article>
-
-            <article class="news-item">
-                <img src="https://i1-vnexpress.vnecdn.net/2024/10/01/israellebanon3-1727739929-2173-1727739963.jpg?w=680&h=408&q=100&dpr=2&fit=crop&s=_JgxW74F5Q6DgiQhIcxCZg" alt="News Image 2">
-                <div class="news-content">
-                    <h2>Second News Title</h2>
-                    <p>This is the content for the second news. It discusses important technology advancements...</p>
-                    <a href="#" class="read-more">Read more</a>
-                </div>
-            </article>
-
-            <article class="news-item">
-                <img src="https://i1-vnexpress.vnecdn.net/2024/09/30/img-1660662111096-166091126785-1862-9388-1727657970.jpg?w=300&h=180&q=100&dpr=2&fit=crop&s=u-1yojz-IpuQH9gRseTGbQ" alt="News Image 3">
-                <div class="news-content">
-                    <h2>Third News Title</h2>
-                    <p>This is the content for the third news. A closer look at the latest sports events and results...</p>
-                    <a href="#" class="read-more">Read more</a>
-                </div>
-            </article>
+        		</div>
+        	</article>
+			</c:forEach>
         </section>
     </main>
 
